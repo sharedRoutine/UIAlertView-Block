@@ -27,6 +27,7 @@ BUIAlertView *av = [[BUIAlertView alloc] initWithTitle:@"Execute?" message:@"Are
   }
 }];
 }
+%end
 ```
 
 If you do this without using Blocks, you'd have to save %orig in a variable and call it from your own delegate method which needs to be added with %new...
