@@ -22,11 +22,9 @@ Usage in a Tweak:
 -(void)executeSomething {
 BUIAlertView *av = [[BUIAlertView alloc] initWithTitle:@"Execute?" message:@"Are you sure you want to execute this?" delegate:nil cancelButtonTitle:@"No" otherButtonTitles:@"Yes!", nil];
 [av showWithDismissBlock:^(NSInteger buttonIndex, NSString *buttonTitle) {
-
   if ([buttonTitle isEqualToString:@"Yes!"]) {
     %orig; //call the original method
   }
-
 }];
 }
 ```
