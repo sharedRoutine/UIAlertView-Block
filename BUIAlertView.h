@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 
 //block typedef
-typedef void (^BUIAlertViewDismissBlock)(NSInteger buttonIndex, NSString *buttonTitle);
+typedef void (^BUIAlertViewDismissBlock)(UIAlertView *alertView, NSInteger buttonIndex, NSString *buttonTitle);
 
 //subclass of UIAlertView
 @interface BUIAlertView : UIAlertView <UIAlertViewDelegate> {

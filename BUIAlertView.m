@@ -27,6 +27,7 @@
 #pragma mark - UIAlertViewDelegate 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
 	//call block with button index and button title
-    dismissBlock(buttonIndex,[alertView buttonTitleAtIndex:buttonIndex]);
+    dismissBlock(alertView,buttonIndex,[alertView buttonTitleAtIndex:buttonIndex]);
+    dismissBlock = nil; //no retain cycles. thanks to caughtinflux
 }
 @end
